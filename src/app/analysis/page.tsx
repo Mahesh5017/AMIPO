@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import AppLayout from "@/components/layout/AppLayout";
 import ExtractionProgress from "@/components/features/ExtractionProgress";
 import FeatureCard from "@/components/features/FeatureCard";
 
 export default function AnalysisPage() {
+  const router = useRouter();
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -105,9 +107,7 @@ export default function AnalysisPage() {
         {progress === 100 && (
           <div className="mt-8 flex justify-end">
             <button
-              onClick={() => {
-                window.location.href = "/risk";
-              }}
+              onClick={() => router.push("/risk")}
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
             >
               Continue to Risk Assessment →

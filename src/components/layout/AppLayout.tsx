@@ -41,9 +41,9 @@ export default function AppLayout({
 
         <ShootingStars
           className="absolute inset-0 z-0"
-          minSpeed={10}
+          minSpeed={5}
           maxSpeed={30}
-          minDelay={4200}
+          minDelay={420}
           maxDelay={8700}
           starColor="#ffffff"
           trailColor="#737373"
